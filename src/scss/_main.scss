@@ -8,13 +8,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background: $very-light-grayish-blue;
+  background-color: $very-light-grayish-blue;
+  background-image: url('../bg-top.svg'), url('../bg-bottom.svg');
+  background-position: top right, bottom left;
+  background-repeat: no-repeat;
   font-family: $font-family;
 }
 
 header {
-  margin: 64px 68px 80px;
+  padding: 64px 68px 80px;
 
   h1 {
     color: $grayish-blue;
@@ -33,7 +40,7 @@ header {
   .switch-container {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 40px;
 
     p {
@@ -49,6 +56,7 @@ header {
     display: flex;
     height: 32px;
     justify-content: center;
+    margin: 0 24px;
     padding: 4px;
     width: 56px;
   }
@@ -80,12 +88,18 @@ main {
   display: flex;
   flex-direction: column;
   margin: 24px;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .price-box-wrapper {
   border-radius: 10px;
   box-shadow: 0 20px 40px 0 rgba(212, 210, 244, 0.5);
   margin-bottom: 32px;
+  max-width: 350px;
   padding: 30px;
   text-align: center;
   width: 100%;
@@ -124,6 +138,7 @@ main {
   button {
     border: 0;
     border-radius: 6px;
+    cursor: pointer;
     font-size: 13px;
     margin-top: 32px;
     padding: 14px 0;
@@ -155,6 +170,11 @@ main {
 
 .price-box-wrapper.dark {
   background: $primary-gradient;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 53px;
+    padding-top: 53px;
+  }
 
   h3 {
     color: #fff;
