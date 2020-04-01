@@ -19,6 +19,7 @@
   "homepage": "https://github.com/msitak/pricing_component_with_toggle#readme",
   "dependencies": {
     "@babel/preset-env": "^7.9.0",
+    "parcel": "^1.12.4",
     "sass": "^1.26.3",
     "stylelint-config-sass-guidelines": "^7.0.0"
   },
